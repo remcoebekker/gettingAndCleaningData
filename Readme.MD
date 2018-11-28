@@ -61,8 +61,7 @@ If the package has not been installed yet, then please do so. Don't worry about 
 run analysis script will take care of this.
 
 ## Step 4 Read the CodeBook 
-Now that the environment has been set-up, it's time to understand what the run analysis script will actually do. Please refer to the CodeBook for this. You can follow this link which will point you to the file in my GitHub account.
-
+Now that the environment has been set-up, it's time to understand what the run analysis script will actually do. Please refer to the CodeBook for this.
 
 ## Step 5 Run the run analysis R script
 Now that the environment has been set-up and you have read the CodeBook to see what the input data is and how the run analysis R script will

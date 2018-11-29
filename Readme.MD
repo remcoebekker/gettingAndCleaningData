@@ -3,19 +3,18 @@ Author: Remco Bekker
 Date:   November 28th, 2018  
 
 ## Introduction
-This readme is the starting point for my elaboration of the final project for the "Getting and cleaning data" course which is part of the
-"Data Science Specialization" track.
+This readme is the starting point for my elaboration of the final project for the "Getting and cleaning data" course on Coursera.
 
 This readme is accompanied by the following 3 files:
 
 * CodeBook ("CodeBook.MD") in which the following is explained:
-    * It is explained what the project entails
-    * A description of the data both (both the input data as well as the output data)
-    * An elaborate explanation of the transformations that are performed by the run analysis R script to get from the input data to the output data
-* Run analysis R script ("run_analysis.R") that contains the actual code for performing the the transformations to get from the input data to the output data. This script uses the input data (which can be downloaded using the download file for analysis R script) to product an output file named "tidy_data.txt".
-* Download file for analysis R script ("download_file_for_analysis.R") that helps in downloading the input data file and setting up the environment needed for running the run analysis R script. 
+    * What the project entails
+    * Description of the data (both the input data as well as the output data)
+    * The transformations that are performed by the run analysis R script to get from the input data to the output data
+* Run analysis R script ("run_analysis.R") that contains the actual code for performing the transformations to get from the input data to the output data. This script uses the input data to produce an output file named "tidy_data.txt"
+* Download file for analysis R script ("download_file_for_analysis.R") that helps in downloading the input data file and setting up the environment needed for running the run analysis R script
 
-In the following the sections the various steps that need to be undertaken to run the run analysis R script are explained.
+In the following sections the various steps that need to be undertaken to run the run analysis R script are explained.
 
 ## Step 1 Setting the working directory
 The dowload file for analysis R script creates a folder that will contain the input data. Please first set the working directory to whatever folder you want this folder to be created in. 
@@ -31,8 +30,7 @@ Once the working directory has been set to the desired location you can run the 
 
     > source('~/Documents/OU/Data science specialization/03 Getting and cleaning data/download_file_for_analysis.R')
 
-The download file for analysis R script contains one function called "downloadFileForAnalysis()" which takes no parameters.
-Now you can run this script like this:
+The download file for analysis R script contains one function called "downloadFileForAnalysis()" which takes no parameters. You can run the script like this:
 
     > downloadFileForAnalysis()
     [1] "Checking if a 'projectData' folder already exists..."
@@ -61,18 +59,18 @@ If the package has not been installed yet, then please do so. Don't worry about 
 run analysis script will take care of this.
 
 ## Step 4 Read the CodeBook 
-Now that the environment has been set-up, it's time to understand what the run analysis script will actually do. Please refer to the CodeBook for this.
+Now that the environment has been set up, it's time to understand what the run analysis script actually does. Please refer to the CodeBook for this.
 
 ## Step 5 Run the run analysis R script
-Now that the environment has been set-up and you have read the CodeBook to see what the input data is and how the run analysis R script will
-produce the tidy data output text file. In order to be able to run it, you first need to source the run analysis R script into you R environment. Depending on where the script resides on your machine you could source it like this:
+Now that the environment has been set up and you have read the CodeBook to see what the input data is and how the run analysis R script will
+produce the tidy data output text file, it is time to run the analysis script. In order to be able to run it, you first need to source the run analysis R script into you R environment. Depending on where the script resides on your machine you could source it like this:
 
     > source('~/Documents/OU/Data science specialization/03 Getting and cleaning data/UCI HAR Dataset/run_analysis.R')
 
 The run analysis R script contains one control function called "createTidyDataSet()" which takes no parameters. This function calls various other
 helper functions which are also located inside the run analysis R script. 
 
-Now you can run this script like this:
+You can run this script like this:
 
     > tidyData <- createTidyDataSet()
     [1] "Reading in testData set..."
@@ -86,7 +84,7 @@ Now you can run this script like this:
 
 ## Step 6 Inspect the tidy data set produced
 The run analysis R script has produced in the working directory (that is inside './projectData/UCI HAR Dataset') an output file
-called 'tidy_data.txt'. You can inspect this file. Also for convenience the tidyData data set is also returned by the run analysis R script so you can assign the tidyData data frame to a variable and immediately inspect the data frame from your R environment. 
-In the previous step the output of the createTidyDataSet() has been assigned to a variable named tidyData.
+called 'tidy_data.txt'. You can inspect this file. For convenience the tidyData data set is also returned by the run analysis R script so you can assign the tidyData data frame to a variable and immediately inspect the data frame from your R environment. 
+In the previous step you can see that the output of the createTidyDataSet() has been assigned to a variable named tidyData.
 
 

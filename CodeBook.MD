@@ -95,7 +95,7 @@ The angular velocity measured by the gyroscope are in units of radians/second.
 Features are normalized and bounded within [-1,1].
 
 ### Data description of the fields in the tidy data set file that is produced by the "run_analysis.R" script ("the output")
-This "run_analysis.R" script will transform the input data to a tidy data file called "tidy_data.txt" which
+This "run_analysis.R" script will transform the input data into a tidy data file called "tidy_data.txt" which
 contains the columns as shown below. 
 
     > str(tidyData)
@@ -168,8 +168,9 @@ contains the columns as shown below.
      $ averageFrequencyBodyAngularvelocityMagnitudeStandarddeviation    : num  -0.961 -0.947 -0.903 -0.934 -0.94 ...
      $ averageFrequencyBodyAngularvelocityJerkMagnitudeMean             : num  -0.99 -0.984 -0.956 -0.961 -0.964 ...
      $ averageFrequencyBodyAngularvelocityJerkMagnitudeStandarddeviation: num  -0.989 -0.983 -0.952 -0.961 -0.962 ...     
+
 * Subject: This is an identifier ranging from 1 to 30 indicating one of the subjects that participated in the endeavour to create the
-original data set.
+original data set
 * Activity: This is a label that contains 1 of 6 activities that was undertaken in the endeavour to create the original dat set: 
     * "WALKING"
     * "WALKING_UPSTAIRS"
@@ -204,8 +205,8 @@ original data set.
     * Averages of the frequency body angular velocity magnitude means and standard deviations
     * Averages of the frequency body angular velocity jerk magnitude means and standard deviations
 
-Since the input data is for the acceleration signals for the X, Y and Z axes in standard gravity units 'g' this also to the corresponding calculated averages.
-Since the input data for angular velocity is measured in units of radians/second this also applies to the corresponding calculated averages.
+Since the input data is for the acceleration signals for the X, Y and Z axes in standard gravity units 'g' the same applies to the corresponding calculated averages.
+Since the input data for angular velocity is measured in units of radians/second the same applies to the corresponding calculated averages.
 Since the features have been normalized and bounded within [-1,1] the same applies to the corresponding calculated averages.
 
 ## Performed transformations 
@@ -215,8 +216,8 @@ to go from the downloaded data to the required tidy data set that is ready for a
 In the following sections each transformation step is explained.
 
 The "run_analysis.R" script contains one control function "createTidyDataSet()" that needs to be run to
-execute the script. This control function calls various helper functions. It starts out by checking
-whether the environment is as expected (expected files for the script are present and the required libraries are loaded). This happens in "validateCorrectEnvironment()". In between the various transformations steps happen which will be explained in the next sections. The script ends with returning the tidy data set for convenience. 
+execute the script. This control function calls various helper functions contained within the same R script. It starts out by checking
+whether the environment is as expected (expected files/folders for the script are present and the required library is loaded). This happens in "validateCorrectEnvironment()". The script ends with the tidy data set data frame being returned. In between the various transformations steps are performed which will be explained in the next sections.  
 
     createTidyDataSet <- function() {
       ## First we validate the basic environment needed for this script.

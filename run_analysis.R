@@ -197,10 +197,9 @@ readInActivityLabels <- function() {
 
 createDescriptiveFeatureNames <- function(features) {
   ## The feature names as stated in the "features.txt" file are rather
-  ## cryptic, so we transform the names. Even though it preference
-  ## is to have all lower case variable names but with these
-  ## long names I feel this makes it less readable. So I opt for camel
-  ## case.
+  ## cryptic, so we transform the names. Even though the preference 
+  ## is to have all lower case variable names, I feel these long names 
+  ## make it less readable. So I opt for camel case.
   
   features <- gsub(pattern = "^t", replacement = "time", x = features)
   features <- gsub(pattern = "^f", replacement = "frequency", x = features)

@@ -396,10 +396,9 @@ The helper function "createDescriptiveFeatureNames()" works as follows:
 
     createDescriptiveFeatureNames <- function(features) {
       ## The feature names as stated in the "features.txt" file are rather
-      ## cryptic, so we transform the names. Even though it preference
-      ## is to have all lower case variable names but with these
-      ## long names I feel this makes it less readable. So I opt for camel
-      ## case.
+      ## cryptic, so we transform the names. Even though the preference
+      ## is to have all lower case variable names, I feel these long names
+      ## make it less readable. So I opt for camel case.
       
       features <- gsub(pattern = "^t", replacement = "time", x = features)
       features <- gsub(pattern = "^f", replacement = "frequency", x = features)
@@ -430,3 +429,10 @@ In the createTidyDataSet() control function the following code snippet performs 
       ## be uploaded.
       print("Writing the tidy data set into the file 'tidy_data.txt'...")
       write.table(x = tidyDataSet, file = "tidy_data.txt", row.name = FALSE, quote = FALSE)
+
+The helper function "addAverageToVariableNames()" works as follows:
+
+    addAverageToVariableNames <- function(variableNames) {
+      variableNames <- sub(pattern = "^time", replacement = "averageTime", x = variableNames)
+      variableNames <- sub(pattern = "^frequency", replacement = "averageFrequency", x = variableNames)
+    }
